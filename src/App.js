@@ -1,19 +1,36 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-
+const  user =
+{
+  name : " The Tung",
+  imageUrl:'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize :90,
+};
 
 function App() {
-  return (
-    <div>
-      <h1>
-        The H Viet Trong function App cua JavaScript
-      </h1>
-   
+return(
+  <>
+{/* Display Data */}
+    <h1>  {user.name}</h1>
+{/*  */}
+    
+    {/* adding style */}
 
+    <img
 
-    </div>
-  );
+      className ="avatar"
+      src ={user.imageUrl}
+      alt = {'photo of'+user.name}
+
+      style=
+      {{
+        width :user.imageSize,
+        height:user.imageSize
+      }}
+    />
+  </>
+);
 }
 
 
