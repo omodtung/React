@@ -7,8 +7,18 @@ const  user =
   imageUrl:'https://i.imgur.com/yXOvdOSs.jpg',
   imageSize :90,
 };
+const products=
+[
 
-function App() {
+  { title: 'Cabbage', isFruit: false, id: 1 },
+  { title: 'Garlic', isFruit: false, id: 2 },
+  { title: 'Apple', isFruit: true, id: 3 },
+];
+function App()
+{
+
+}
+function App1() {
 return(
   <>
 {/* Display Data */}
