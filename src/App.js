@@ -13,37 +13,43 @@ const products = [
   { title: "Apple", isFruit: true, id: 3 },
 ];
 
-
-function App()
-{
-  return(
+function App() {
+  return (
     <div>
-    <h1>Counters that update separately</h1>
-    <MyButton />
-    <MyButton />
+      <h1>Counters that update separately</h1>
+      <MyButton />
+      
     </div>
   );
 }
 
-function MyButton()
-{
-  const [count ,setCount] =useState(0);
-  function handleClick ()
-  {
-    setCount(count +1 );
-
+function MyButton() {
+  const [count, setCount] = useState(0);
+  function handleClick() {
+    setCount(count + 1);
   }
 
+  return (
+    <div>
+<TimesClickButton count={count} onClick={handleClick}/>
+<TimesClickButton count={count} onClick={handleClick}/>
+      
+    </div>
+
+
+  );
+ 
+
+
+}
+
+function TimesClickButton({ count, onClick }) {
   
+  return(
 
-return(
-<button onClick={handleClick}>
-  click {count} times
-</button>
-
-);
-
-
+    <button onClick={onClick}>clicked times {count} times</button>
+  );
+  // <button onClick={onClick}>clicked {count} times</button>
   
 }
 
@@ -59,9 +65,7 @@ function App3() {
     </li>
   ));
 
-  return (
-    <ul>{listItem}</ul>
-  );
+  return <ul>{listItem}</ul>;
 }
 function App1() {
   return (
